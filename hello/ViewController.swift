@@ -14,10 +14,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setColorVC()
         view.addSubview(tableView)
         tableView.dataSource = self
         tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: "customCell")
         setConstraints()
+    }
+    
+    func setColorVC() {
+        tableView.backgroundColor = .yellow
     }
     
     private func setConstraints() {
