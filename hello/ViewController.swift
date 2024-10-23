@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     }
     
     func setColorVC() {
-        tableView.backgroundColor = .yellow
+        tableView.backgroundColor = .red
     }
     
     private func setConstraints() {
@@ -40,6 +40,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomTableViewCell
+        cell.backgroundColor = .yellow
         cell.headerLabel.text = Constants.Text.headerLabelText
         cell.headerLabel.font = Constants.Fonts.UI16SemiBold
         
